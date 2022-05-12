@@ -1,5 +1,7 @@
 package com.jr.fleet.main.service;
 
+import com.jr.fleet.main.exceptions.CarNotFoundException;
+
 //import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +47,7 @@ public class FleetService {
 //	        // Return updated Person from List
 //	        return this.garage.get(id);
 
-		Optional<Cars> existingOptional = this.fleetRepo.findById(id);
+		Optional<Cars> existingOptional = Optional.of(this.fleetRepo.findById(id).orElseThrow(CarNotFoundException::new));
 		Cars existingCar = existingOptional.get();
 		existingCar.setMake(car.getMake());
 		existingCar.setModel(car.getModel());
@@ -58,7 +60,7 @@ public class FleetService {
 	public boolean removeCar(Long id) {
 		// Remove Person and return it
 
-		this.fleetRepo.findById(id).orElseThrow();
+		this.fleetRepo.findById(id).orElseThrow(CarNotFoundException::new);
 		this.fleetRepo.deleteById(id);
 		return fleetRepo.existsById(id);
 

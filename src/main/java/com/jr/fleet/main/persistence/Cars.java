@@ -6,7 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@NoArgsConstructor
 public class Cars {
 
 	@Id
@@ -24,10 +29,7 @@ public class Cars {
 	
 	@Column (nullable = false, name="d_engineSize")
 	private int engineSize;
-	
-	public Cars() {
-		
-	}
+
 
 	public Cars(Long inId, String inMake, String inModel, int inDoors, int inEngineSize) {
 		super();
@@ -36,44 +38,6 @@ public class Cars {
 		this.model = inModel;
 		this.doors = inDoors;
 		this.engineSize = inEngineSize;
-	}
-	
-	public String getMake() {
-		return make;
-	}
-
-	public void setMake(String make) {
-		this.make = make;
-	}
-
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
-		this.model = model;
-	}
-
-	public int getDoors() {
-		return doors;
-	}
-
-	public void setDoors(int doors) {
-		this.doors = doors;
-	}
-
-	public int getEngineSize() {
-		return engineSize;
-	}
-
-	public void setEngineSize(int engineSize) {
-		this.engineSize = engineSize;
-	}
-
-	public Long getId() {
-		return id;
-	}
-	
-	
+	}	
 
 }
