@@ -1,0 +1,56 @@
+    {
+        "id": 1,
+        "make": "vw",
+        "model": "polo",
+        "doors": 3,
+        "engineSize": 1000
+    },
+    {
+        "id": 2,
+        "make": "vw",
+        "model": "polo",
+        "doors": 5,
+        "engineSize": 1200
+    },
+    {
+        "id": 3,
+        "make": "toyota",
+        "model": "auris",
+        "doors": 5,
+        "engineSize": 1600
+    },
+    {
+        "id": 4,
+        "make": "mercedes",
+        "model": "c-180",
+        "doors": 5,
+        "engineSize": 1600
+    },
+    {
+        "id": 5,
+        "make": "mercedes",
+        "model": "a-180",
+        "doors": 5,
+        "engineSize": 1600
+    },
+    {
+        "id": 6,
+        "make": "mini",
+        "model": "cooper",
+        "doors": 3,
+        "engineSize": 1600
+    },
+    {
+        "id": 7,
+        "make": "toyota",
+        "model": "corolla",
+        "doors": 5,
+        "engineSize": 1400
+    },
+    {
+        "id": 8,
+        "make": "vauxhall",
+        "model": "vectra",
+        "doors": 5,
+        "engineSize": 2000
+    }
